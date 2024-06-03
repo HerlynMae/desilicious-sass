@@ -1,0 +1,28 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+// blog
+.blogs {
+  &__list {
+    margin: 0 auto;
+    max-width: 60rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    img {
+      width: 50rem;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__details {
+    max-width: 50rem;
+    text-align: left;
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+  }
+}

@@ -27,12 +27,9 @@
   }
 }
 
-// MENU
+// SPECIAL MENU
 
 .menu {
-  padding: 5rem 0;
-  background-color: $clr--primary;
-
   &__title {
     @include centerAll;
     flex-direction: column;
@@ -74,11 +71,186 @@
   background-size: cover;
   width: 98vw;
   height: 70vh;
-  padding: 5rem 0;
+  padding: 13rem 0;
   &__details {
-    max-width: 50rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 40rem;
+    h4 {
+      margin-bottom: 2rem;
+      font-family: $font-secondary;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// OTHER MENU
+
+.other-menu {
+  &__title {
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font-secondary;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  &__wrapper {
+    @include grid(2, 1rem);
+    justify-items: center;
+  }
+  &__food {
+    ul {
+      @include between;
+      li {
+        color: $clr--secondary;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// BOOK A TABLE
+.booking {
+  background-color: $clr--primary;
+  padding: 10rem 0;
+
+  &__wrapper {
+    @include centerAll;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../IMG/book\ a\ table\ bg.jpg);
+    @include bg-size;
+    height: 120vh;
+  }
+  &__table {
+    width: 60rem;
+    height: 45rem;
+    h4 {
+      font-size: 2rem;
+    }
+    form {
+      border: 1px solid $clr--light;
+    }
+    input {
+      width: 98%;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      background-color: transparent;
+      border: 1px solid $clr--secondary;
+    }
+    textarea {
+      @extend input;
+      height: 10rem;
+    }
+    input::placeholder {
+      font-family: $font-primary;
+      color: $clr--light;
+    }
+    input:focus,
+    input:enabled {
+      color: $clr--light;
+    }
+  }
+  &__fnln {
+    @include between;
+  }
+  &__button {
+    @include centerAll;
+  }
+}
+
+// TESTIMONIAL
+.testimonial {
+  &__wrapper {
+    text-align: center;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  &__slider {
+    .tns-outer {
+      overflow: hidden;
+      max-width: 40rem;
+
+      & > button {
+        display: none;
+      }
+    }
+
+    // .tns-nav {
+    //   text-align: center;
+    //   button {
+    //     margin: 0.5rem;
+    //     width: 1.7rem;
+    //     height: 1.7rem;
+    //     border-radius: 50%;
+    //     border: none;
+    //   }
+    //   .tns-nav-active {
+    //     background-color: $clr--dark;
+    //   }
+    // }
+  }
+  &__clients {
+    i {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      border: 2px solid $clr--secondary;
+      padding: 1.5rem;
+      border-radius: 50%;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $clr--secondary;
+    }
+    small {
+      font-weight: 600;
+    }
+  }
+}
+
+// VIDEO
+.video {
+  &__wrapper {
+    @include centerAll;
+  }
+}
+
+// BLOG
+.blog {
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+    h2 {
+      font-family: $font-secondary;
+      font-size: 3rem;
+    }
+  }
+  &__wrapper {
+    @include grid(3, 5rem);
+  }
+  &__card {
+    img {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
   }
 }

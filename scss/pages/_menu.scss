@@ -1,0 +1,35 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+// MENU ITEMS
+
+.menu-items {
+  @include centerAll;
+  &__title {
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__details {
+    @include grid(2, 1rem);
+    justify-items: center;
+    margin-bottom: 2rem;
+    ul {
+      @include between;
+      li {
+        color: $clr--secondary;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  img {
+    width: 75%;
+    border-radius: 2rem;
+  }
+}

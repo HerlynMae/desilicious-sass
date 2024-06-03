@@ -9,10 +9,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin bg-size {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 @mixin grid($cols, $gap) {
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
-  grid-gap: $gap;
+  gap: $gap;
 }
 @mixin mediaQuery($width) {
   @media screen and (max-width: $width) {
