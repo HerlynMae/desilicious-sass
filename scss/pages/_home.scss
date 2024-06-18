@@ -44,6 +44,9 @@
     display: grid;
     grid-template-columns: 25rem 25rem 25rem;
     place-content: center;
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__list {
     padding: 2rem 1rem;
@@ -69,7 +72,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 98vw;
+  width: 100vw;
   height: 70vh;
   padding: 13rem 0;
   &__details {
@@ -96,11 +99,17 @@
     }
     p {
       font-size: 1.5rem;
+      @include mediaQuery(520px) {
+        font-size: 1.2rem;
+      }
     }
   }
   &__wrapper {
     @include grid(2, 1rem);
     justify-items: center;
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__food {
     ul {
@@ -121,17 +130,28 @@
 .booking {
   background-color: $clr--primary;
   padding: 10rem 0;
-
+  @include mediaQuery(520px) {
+    padding: 2rem 0;
+  }
   &__wrapper {
     @include centerAll;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(../../IMG/book\ a\ table\ bg.jpg);
     @include bg-size;
     height: 120vh;
+    @include mediaQuery(520px) {
+      background-image: none;
+      height: auto;
+    }
   }
   &__table {
+    padding: 5rem;
     width: 60rem;
     height: 45rem;
+    @include mediaQuery(520px) {
+      width: 100rem;
+      padding: 0;
+    }
     h4 {
       font-size: 2rem;
     }
@@ -221,8 +241,17 @@
 
 // VIDEO
 .video {
+  padding: 5rem 0;
+  @include mediaQuery(520px) {
+    padding: 2rem 0;
+  }
   &__wrapper {
     @include centerAll;
+    iframe {
+      @include mediaQuery(520px) {
+        height: 300px;
+      }
+    }
   }
 }
 
@@ -237,14 +266,24 @@
       font-family: $font-secondary;
       font-size: 3rem;
     }
+    @include mediaQuery(520px) {
+      margin-bottom: 5rem;
+    }
   }
   &__wrapper {
     @include grid(3, 5rem);
+    @include mediaQuery(520px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__card {
     img {
       margin-bottom: 2rem;
+      @include mediaQuery(520px) {
+        margin-bottom: 0.5rem;
+      }
     }
+
     h4 {
       font-size: 1.4rem;
       margin-bottom: 1rem;

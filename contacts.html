@@ -20,8 +20,8 @@
       <div class="container">
         <div class="header__wrapper">
           <img src="./IMG/81240106-logo1.png" alt="logo" class="header__logo" />
-          <nav class="header__nav">
-            <ul>
+          <nav>
+            <ul class="header__nav">
               <li><a href="">Home</a></li>
               <li><a href="">Menu</a></li>
               <li><a href="">Chefs</a></li>
@@ -30,9 +30,88 @@
               <li><a href="">Contact</a></li>
             </ul>
           </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
+
+    <!-- CONTACT -->
+    <section class="contact pt--10 pb--5 bg--primary">
+      <div class="container">
+        <div class="contact__wrapper">
+          <div class="contact__address">
+            <ul>
+              <li><i class="fa-solid fa-phone-volume"></i></li>
+              <li><p>407-509-3646</p></li>
+            </ul>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i></li>
+              <li>
+                <p>
+                  4148 Rose Avenue, New Orleans, LA, <br />
+                  Louisiana, 70114
+                </p>
+              </li>
+            </ul>
+            <ul>
+              <li><i class="fa-solid fa-earth-americas"></i></li>
+              <li>
+                <p>contact@rentals.com</p>
+              </li>
+            </ul>
+          </div>
+          <div class="contact__map mb--2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.372058564886!2d121.34546637589835!3d14.05519359019537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5cd2d6006569%3A0x9075b8a72b9d5fb0!2sFrontline%20Business%20Solutions%2C%20Inc.!5e0!3m2!1sen!2sph!4v1717460194148!5m2!1sen!2sph"
+              width="1000"
+              height="600"
+              style="border-radius: 1.5rem"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contact__form">
+            <div class="contact__title t-align--center mb--2">
+              <h4>Get In Touch</h4>
+              <p>Make it happens in 4 easy steps! Best Of Luck</p>
+            </div>
+
+            <form>
+              <div class="contact__name">
+                <ul>
+                  <li><label for="">First Name</label></li>
+                  <li><input type="text" /></li>
+                </ul>
+                <ul>
+                  <li><label for="">Last Name</label></li>
+                  <li><input type="text" /></li>
+                </ul>
+              </div>
+              <ul>
+                <li><label> Email</label></li>
+                <li><input type="text" /></li>
+              </ul>
+              <ul>
+                <li><label> Subject</label></li>
+                <li><input type="text" /></li>
+              </ul>
+              <ul>
+                <li><label>Your Message</label></li>
+                <li><textarea> </textarea></li>
+              </ul>
+            </form>
+            <div class="contact__button">
+              <a href="" class="btn bg--secondary">Submit Form</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer bg--dark pt--5 pb--2">

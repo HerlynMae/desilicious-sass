@@ -1,0 +1,69 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+// CONTACT PAGE
+.contact {
+  &__wrapper {
+    @include centerAll;
+    flex-direction: column;
+  }
+  &__address {
+    @include grid(3, 2rem);
+    justify-items: center;
+    text-align: center;
+    ul {
+      li {
+        i {
+          color: $clr--secondary;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.3rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__form {
+    text-align: left;
+    width: 70%;
+    label {
+      padding: 0.5rem;
+    }
+    input {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: transparent;
+      border: 1px solid $clr--light;
+      border-radius: 1rem;
+    }
+    textarea {
+      @extend input;
+      height: 10rem;
+    }
+    input::placeholder {
+      font-family: $font-primary;
+      color: $clr--light;
+    }
+    input:focus,
+    input:enabled {
+      color: $clr--light;
+    }
+  }
+  &__name {
+    @include grid(2, 2rem);
+    text-align: left;
+  }
+  &__title {
+    h4 {
+      font-size: 2rem;
+    }
+  }
+  &__button {
+    @include centerAll;
+  }
+}
