@@ -12,6 +12,10 @@
   transform: translateY(1vh);
   max-width: 100%;
   margin: 0 auto;
+  @include mediaQuery(520px) {
+    padding: 2rem 4rem;
+    transform: unset;
+  }
   &__wrapper {
     display: flex;
     align-items: center;
@@ -26,6 +30,9 @@
       max-width: 80rem;
       margin: 0 auto;
       transition: 0.5s ease;
+      @include mediaQuery(520px) {
+        max-width: unset;
+      }
     }
   }
 

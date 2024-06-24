@@ -939,6 +939,12 @@ img {
   max-width: 100%;
   margin: 0 auto;
 }
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 2rem 4rem;
+    transform: unset;
+  }
+}
 .header__wrapper {
   display: flex;
   align-items: center;
@@ -954,6 +960,11 @@ img {
   max-width: 80rem;
   margin: 0 auto;
   transition: 0.5s ease;
+}
+@media screen and (max-width: 520px) {
+  .header__wrapper.open {
+    max-width: unset;
+  }
 }
 .header__logo {
   height: 3rem;
