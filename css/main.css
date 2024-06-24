@@ -930,12 +930,30 @@ img {
 }
 
 .header {
+  display: block;
   position: fixed;
   z-index: 999;
   width: 100%;
-  box-shadow: rgba(227, 49, 10, 0.1) 0px 4px 12px;
+  padding: 2rem 10rem;
+  transform: translateY(1vh);
+  max-width: 100%;
+  margin: 0 auto;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  transition: 0.5s ease;
+}
+.header__wrapper.open {
   background-color: #0e1516;
-  padding: 2rem 0;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  transition: 0.5s ease;
 }
 .header__logo {
   height: 3rem;
@@ -946,11 +964,6 @@ img {
     height: 2rem;
     width: 7rem;
   }
-}
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .header__nav {
   display: flex;
